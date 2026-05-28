@@ -41,18 +41,43 @@ body {
     margin: 0 0 40px 0;
 }
 
-/* The Orange Button */
-.cta-button {
-    background-color: #ff5722;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+/* Layout for the icons section */
+.downloads {
+    display: flex;
+    gap: 50px; /* Slightly wider gap to accommodate text */
+    margin-top: 40px; 
 }
 
-/* Make the button slightly darker when hovered over */
-.cta-button:hover {
-    background-color: #e64a19; 
+/* Stack the icon and text vertically */
+.download-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Removes the default blue link underline */
+    gap: 8px; /* Space between icon and text */
+}
+
+/* Base icon styling */
+.os-icon {
+    width: 45px;
+    height: auto;
+    transition: filter 0.2s ease;
+}
+
+/* Base text styling */
+.os-label {
+    color: #89939a; /* Matches your gray tagline text */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* Hover effects */
+.download-link:hover .os-icon {
+    /* Converts gray SVG to InterChat Orange */
+    filter: invert(49%) sepia(84%) saturate(4155%) hue-rotate(349deg) brightness(101%) contrast(101%);
+}
+
+.download-link:hover .os-label {
+    color: #ff5722; /* Changes text to InterChat Orange */
 }
